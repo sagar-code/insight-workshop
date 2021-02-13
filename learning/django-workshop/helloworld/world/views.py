@@ -1,7 +1,13 @@
 from django.shortcuts import render
 
+
 # importing HttpResponse
 from django.http import HttpResponse
+
+
+# importing python module
+import datetime
+
 
 # Create your views here.
 # function based views
@@ -26,4 +32,20 @@ def html(request):
     """
 
     return HttpResponse(html_content)
+
+
+def date_time(request):
+    now = datetime.datetime.now()
+    date_content = f"""
+    <h1> Today date: {now} </h1>
+    """
+    return HttpResponse(date_content)
+
+
+def get_post(request):
+    if request.method == 'GET':
+        return HttpResponse(request.scheme)
+    elif request.method == 'POST':
+        return HttpResponse(request.method)
+
 
