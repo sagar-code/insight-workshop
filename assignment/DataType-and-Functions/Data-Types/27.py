@@ -11,4 +11,7 @@ first_data_integer = list(map(lambda x: int(x), first_data))
 second_data = input("Enter the second data. \n").split()
 second_data_integer = list(map(lambda x: int(x), second_data))
 
+# program logic
+first_data_integer[-1: ] = second_data_integer
 
+print(first_data_integer)
