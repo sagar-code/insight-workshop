@@ -16,7 +16,7 @@ Including another URLconf
 
 
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 
 # importing our views.py from world app
 from world.views import home, profile, profile_json, int_converter_view, debug_request
@@ -30,5 +30,5 @@ urlpatterns = [
     path('profile_json/<str:username>', profile_json),
     path('path/<str:int_data>', int_converter_view),
     path('test-path/', debug_request),
-
+    path('template/', include('templating.urls'))
 ]

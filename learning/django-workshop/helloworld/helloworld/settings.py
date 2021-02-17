@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     # added app
-    'world'
+    'world',
+    'templating'
 ]
 
 MIDDLEWARE = [
