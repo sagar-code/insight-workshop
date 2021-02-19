@@ -42,7 +42,8 @@ INSTALLED_APPS = [
     # added app
     'world',
     'templating',
-    'modelpractice'
+    'modelpractice',
+    'modelrelation',
 ]
 
 MIDDLEWARE = [
