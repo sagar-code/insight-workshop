@@ -1,0 +1,74 @@
+.btn {
+
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 5rem;
+
+        /* for animation  */
+        transition: all .2s;
+
+        position: relative;
+
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        /* box-shadow: (x-direction, y-direction, blur, color) */
+        box-shadow: 0 1rem 2rem rgba($color-black, .2);
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    /* when button is clicked  */
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .5rem 1rem rgba($color-black, .2);
+    }
+
+    &--white {
+        background-color: $color-white;
+        color: $color-grey-dark;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
+    &::after {
+        /* content and display is always needed in pseudo element */
+        content: '';
+        display: inline-block;
+
+        height: 100%;
+        width: 100%;
+        border-radius: 5rem;
+
+        /* to put behind the button */
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+        /* for animation  */
+        transition: all .4s;
+
+    }
+
+    &--animated {
+
+        /* for animation to move upward  */
+        animation: moveFromButtom .5s ease-out;
+        animation-delay: .75s;
+
+        /* to make button animation invisible before the animation: (by applying 0% animation at first)  */
+        animation-fill-mode: backwards;
+
+    }
+}

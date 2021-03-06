@@ -1,0 +1,22 @@
+/* universal selector: to reset the page  */
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+
+    /* inherit box-sizing to all the components (here inherit from body) */
+    box-sizing: inherit;
+}
+
+html {
+    /* 10/16*100=62.5% :: This define what 1 rem is */
+    font-size: 62.5%;
+}
+
+/* body content will be inherit */
+body {
+
+    box-sizing: border-box;
+
+}
