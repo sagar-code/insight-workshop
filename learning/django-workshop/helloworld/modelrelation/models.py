@@ -8,5 +8,5 @@ class User(models.Model):
 
 class UserDetail(models.Model):
     age = models.IntegerField()
-    # one to one realtion
+    # one to one relation
     user = models.OneToOneField(User, on_delete=models.CASCADE)

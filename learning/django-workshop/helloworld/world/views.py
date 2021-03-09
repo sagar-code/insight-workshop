@@ -49,7 +49,7 @@ def profile_json(request, username):
 
     if not full_name:
         # return HttpResponseNotFound("The username doesn't exist.")
-        return HttpResponseNotFound("The username doesn't exist.", status=404)
+        return HttpResponse("The username doesn't exist.", status=404)
 
     dict_data = {
         "fullname": full_name
