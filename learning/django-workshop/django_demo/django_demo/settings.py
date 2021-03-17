@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 
     # custom app
     'world',
+    'templating',
+    'modelpractice',
 ]
 
 MIDDLEWARE = [
