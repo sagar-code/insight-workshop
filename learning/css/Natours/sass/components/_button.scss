@@ -41,6 +41,15 @@
         }
     }
 
+    &--green {
+        background-color: $color-primary;
+        color: $color-white;
+
+        &::after {
+            background-color: $color-white;
+        }
+    }
+
     &::after {
         /* content and display is always needed in pseudo element */
         content: '';
